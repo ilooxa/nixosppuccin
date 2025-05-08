@@ -1,0 +1,151 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 28,
+	"width": 1920,
+	"margin-top": 5,
+
+	
+    "modules-left": ["cpu", "memory","custom/cmus"],
+    "modules-center": ["custom/menu", "hyprland/workspaces","hyprland/window"],
+    "modules-right": ["tray","pulseaudio","hyprland/language","clock","custom/power"],
+
+
+    "cpu": {
+		"format": "  {usage}%",
+		"tooltip": false
+    },
+
+
+	"memory": {
+		"format": "  {}%",
+		"tooltip": false
+	},
+
+
+	"hyprland/window": {
+		"format": "{class}",
+		"separate-outputs": false,
+},
+
+
+	"custom/menu": {
+		"format": "{icon}",
+		"format-icons": "",
+		"on-click": "wofi --show drun -c ~/.config/wofi/config -s ~/.config/wofi/style.css",
+		"escape": true,
+		"tooltip": false
+	},
+
+
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"on-click": "activate",
+		"format-icons": {
+			"urgent": " ",
+			"active": " ",
+			"default": ""
+
+
+			},
+		"tooltip": false
+	},
+
+
+	"hyprland/language": {
+	    "format": "{}",
+	    "format-en": "EN",
+	    "format-ru": "RU",
+	},
+
+
+	"tray": {
+		"icon-size": 16,
+		"spacing": 16
+	},
+
+
+	"clock": {
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": "{:%Y-%m-%d}"
+	},
+	
+	"custom/cava": { 
+        "exec": "sleep 3 && cava -p /home/ilooxa/.config/cava/cava.conf | sed -u 's/;//g;s/0/0/g;s/1/1/g;s/2/2/g;s/3/3/g;s/4/4/g;s/5/5/g;s/6/6/g;s/7/7/g;s/8/8/g;s/9/9/g;'" 
+},
+
+
+    "pulseaudio": {
+		"scroll-step": 5,
+		"format": "{icon}  {volume}%",
+		"format-icons": {
+			"default": ["", "", ""]
+		},
+		"on-click": "pavucontrol"
+	},
+
+
+
+
+
+	"custom/cmus": {
+	"format": " {}",
+	//"max-length": 25,
+	"interval": 1,
+/*	"exec": "cmus-remote -C \"format_print '%F'\"", */
+/*	"exec-if": "pgrep cmus", */
+	"exec": "echo music",
+	"on-click": "playerctl --player=chromium play-pause",
+	"on-scroll-up": "playerctl --player=chromium next",
+	"on-scroll-down": "playerctl --player=chromium previous",
+	"escape": true,
+	"tooltip": false
+	},
+
+
+
+	"custom/sep": {
+	"format": "_",
+	},
+
+        "custom/1l": {
+                "format": "",
+                "tooltip": false
+        },
+        "custom/2l": {
+                "format": "",
+                "tooltip": false
+        },
+        "custom/1r": {
+                "format": "",
+                "tooltip": false
+        },
+        "custom/2r": {
+                "format": "",
+                "tooltip": false
+        },
+        
+	"custom/power": {
+		"format" : "⏻",
+		"tooltip": false,
+		"on-click": "wlogout"
+		}
+	},
+        
+	 "custom/media": {
+ 
+       "interval": 1,
+       
+       "return-type": "json",
+       
+       "exec": "echo music",
+       
+       "on-click":"playerctl --all-player play-pause",
+ 
+       "escape": true
+       
+    }
+
+
+}
+

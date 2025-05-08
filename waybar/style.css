@@ -1,0 +1,115 @@
+* {
+	border-radius: 20;
+	border: none;
+	font-family: JetBrainsMono-Bold, Symbols Nerd Font;
+	font-weight: normal;
+	font-size: 12px;
+	padding: 0px 5px;
+	margin: 0px 5px;
+}
+
+@define-color bg #33313d;
+@define-color fg #ffffff;
+@define-color gr #545d70;
+@define-color red #f7768e;
+@define-color green #b9f27c;
+@define-color blue #94e2d5;
+@define-color cyan #eeb5f5;
+@define-color bg2  #f5e0dc;
+
+window#waybar {
+	background-color: rgba(43, 48, 59, 0.0);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+/*    min-height: 20px;  */ /* set waybar's height to 18px */
+}
+
+#workspaces {
+	color: @fg;
+	background-color: @bg;
+	border: none;
+	border-radius: 20;
+	margin: 0px;
+	padding: 0px;
+}
+
+#workspaces button {
+	padding: 0 0px;
+	background-color: transparent;
+	margin: 0px;
+	color: @gr;
+}
+#workspaces button:hover {
+}
+#workspaces button.active {
+        color: @bg2;
+
+}
+
+
+
+#cpu {
+        color: @fg;
+        background-color: @bg;
+}
+#memory {
+        color: @fg;
+        background-color: @bg;
+}
+#window {
+        color: @fg;
+        background-color: @bg;
+}
+#custom-media,
+#tray,
+#language,
+#pulseaudio,
+#clock {
+	color: @fg;
+	background-color: @bg;
+}
+
+#custom-power { 
+        background-color: @bg;
+        color: @fg;
+	padding: 0 10px
+}
+
+#custom-menu {
+	background-color: @bg;
+	color: @blue;
+	padding: 0 10px;
+	font-size: 15px;
+}
+
+#custom-sep {
+	color: rgba(0, 0, 0, 0.0);
+}
+
+#window {
+	background-color: @bg;
+	color: @fg;
+	font-weight: bold;
+}
+
+
+#custom-1r,
+#custom-1l {
+        color: @bg;
+	font-size: 27px;
+	margin: 0px 0px;
+}
+#custom-2r,
+#custom-2l {
+        color: #a7d8bb;
+        background: @bg;
+	margin: 0px 0px;
+	padding: 0 0px;
+	font-size: 25px;
+}
+
+#custom-cmus {
+	color: @fg;
+	background: @bg;
+}
